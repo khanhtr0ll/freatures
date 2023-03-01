@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>khanh</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <table border="1">
+      <% lops.forEach(item => { %>
+        <tr>
+          <td><%= item._id %></td>
+          <td><%= item.malophoc %></td>
+          <td><%= item.tenlop %></td>
+          <td><%= item.soluongsv %></td>
+          <td><%= item.magiangvien %></td>
+          <a href="/update/<%= item._id %>">chinh sua</a>
+          <a href="/delete/<%= item._id %>">delete</a>
+        </tr>
+      <% }) %>
+    </table>
+    <a href="form-add"><button>them lop</button></a>
+  </body>
+</html>
+
